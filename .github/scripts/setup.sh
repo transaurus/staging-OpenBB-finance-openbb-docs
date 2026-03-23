@@ -62,4 +62,16 @@ else
     exit 1
 fi
 
+echo "[INFO] Running build..."
+npm run build
+
+echo "[INFO] Verifying build output..."
+if [ -d "build" ] && [ -n "$(ls -A build)" ]; then
+    COUNT=$(find build -type f | wc -l)
+    echo "[INFO] Build directory contains $COUNT files"
+else
+    echo "[ERROR] build/ directory missing or empty"
+    exit 1
+fi
+
 echo "[INFO] Setup completed successfully!"
