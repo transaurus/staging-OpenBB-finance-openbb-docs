@@ -1,0 +1,39 @@
+{
+  "description": "Repository-specific fixes for OpenBB-finance/openbb-docs",
+  "fixes": {
+    "src/components/Icons/Bullseye.tsx": [
+      {
+        "type": "replace",
+        "find": "import * as React from \"react\"\nimport React, { SVGProps } from \"react\"",
+        "replace": "import React, { SVGProps } from \"react\"",
+        "comment": "Remove duplicate React import - 'import * as React' conflicts with 'import React, { SVGProps }'"
+      }
+    ],
+    "src/components/Icons/Desktop.tsx": [
+      {
+        "type": "replace",
+        "find": "import * as React from \"react\"\nimport React, { SVGProps } from \"react\"",
+        "replace": "import React, { SVGProps } from \"react\"",
+        "comment": "Remove duplicate React import - 'import * as React' conflicts with 'import React, { SVGProps }'"
+      }
+    ],
+    "src/components/Icons/YCombinator.tsx": [
+      {
+        "type": "replace",
+        "find": "import * as React from \"react\"\nimport React, { SVGProps } from \"react\"",
+        "replace": "import React, { SVGProps } from \"react\"",
+        "comment": "Remove duplicate React import - 'import * as React' conflicts with 'import React, { SVGProps }'"
+      }
+    ]
+  },
+  "newFiles": {
+    "content/workspace/developers/ai-features/_category_.json": {
+      "content": "{\n  \"label\": \"AI Features\",\n  \"position\": 9,\n  \"collapsible\": true,\n  \"collapsed\": true,\n  \"key\": \"developers-ai-features\"\n}\n",
+      "comment": "Add unique key to avoid duplicate sidebar translation key with analysts/ai-features"
+    },
+    "content/workspace/analysts/ai-features/_category_.json": {
+      "content": "{\n  \"label\": \"AI Features\",\n  \"position\": 5,\n  \"collapsible\": true,\n  \"collapsed\": true,\n  \"key\": \"analysts-ai-features\"\n}\n",
+      "comment": "Add unique key to avoid duplicate sidebar translation key with developers/ai-features"
+    }
+  }
+}
