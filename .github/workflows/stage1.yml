@@ -88,11 +88,12 @@ jobs:
 
       - name: 'Sync files to working directory'
         run: |
-          rsync -av --delete \
+          rsync -av --delete --no-perms --no-owner --no-group \
             --exclude='.git/' \
             --exclude='.github/' \
             --exclude='.translation_memory/' \
             --exclude='source-repo/' \
+            --exclude='node_modules/' \
             ./source-repo/ ./
           rm -rf ./source-repo
 
