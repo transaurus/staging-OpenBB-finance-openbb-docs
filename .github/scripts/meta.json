@@ -1,0 +1,9 @@
+{
+  "sourceUrl": "https://github.com/OpenBB-finance/openbb-docs",
+  "branch": "main",
+  "docusaurusRoot": ".",
+  "translateCommand": "npx docusaurus write-translations",
+  "buildCommand": "npm run build",
+  "buildOutput": "build",
+  "packageManager": "npm"
+}
